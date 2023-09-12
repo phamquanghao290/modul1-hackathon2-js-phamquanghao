@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Mời bạn nhập chuỗi kí tự bất kì");
+
+        function Chu(chuoi) {
+            let mangKyTu = chuoi.split('')
+            let kyTuChu = mangKyTu.filter((kyTu) => {
+                return /[a-zA-Z]/.test(kyTu);
+            });
+            let ketQua = kyTuChu.join('');
+
+            return ketQua;
+        }
+
+        let ketQua = Chu(a);
+        document.write(ketQua);
+    </script>
+</body>
+
+</html>
